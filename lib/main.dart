@@ -42,6 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
         decoration: BoxDecoration(
             color: Colors.blue
         ),
+        //Отображение скроллбара и SingleChildScrollView, Чтобы сайт при изменении разрешения не выдавал ошибок а обрезался, позволяя скроллить страницу
         child: Scrollbar(
           trackVisibility: true,
           controller: _controller,

@@ -26,6 +26,7 @@ class LeftMenu extends StatelessWidget {
                   height: 10,
                   width: MediaQuery.sizeOf(context).width*0.2,
                 ),
+                //MouseRegion используется для изменения курсора при наведении на дочерний объект
                 MouseRegion(
                   cursor: SystemMouseCursors.click,
                   child: LeftMenuCard(image: LeftCardContent[index].image, title: LeftCardContent[index].title,),

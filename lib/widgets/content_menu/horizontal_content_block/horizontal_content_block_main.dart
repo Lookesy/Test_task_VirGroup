@@ -82,6 +82,8 @@ class HorizontalContentBlock extends StatelessWidget {
                     if (snapshot.hasError){
                       print(snapshot.error);
                       return Container();
+                      //При успешной загрузке Json файла происходит выборка элементов, соответствующих требованиям.
+                      //В данном случае проверяется категория товаров. Товары с необходимой категорией добавляются в новый список, который и выводится далее
                     } else if (snapshot.hasData){
                       var items = snapshot.data as List<ProductDataModel>;
                       int count = 0;
@@ -104,6 +106,7 @@ class HorizontalContentBlock extends StatelessWidget {
                             cursor: SystemMouseCursors.click,
                             child: GestureDetector(
                               child: HorizontalContentCard(
+                                //Здесь происходит передача аргументов дочернему виджету карточки товара.
                                 image: dataList[index].image.toString(),
                                 title: dataList[index].name.toString(),
                                 description: dataList[index].weight.toString(),
